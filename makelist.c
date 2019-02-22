@@ -56,7 +56,7 @@ int main(int argc,char*argv[]){
 	struct ifreq ifr;
 	struct sockaddr_in client_addr;
 
-	sprintf(listfilewk,"%s_wk",listfile);
+	sprintf(listfilewk,"iplistwk");
 
 	fp = fopen(listfilewk,"wt");
 	if(fp==NULL){
