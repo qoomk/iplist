@@ -23,7 +23,8 @@ int main(int argc,char*argv[]){
 	int ip4s,ip4e;
 
 	printf("param %d\n",argc);
-	if(argc != 5){
+	
+	if(argc != 9){
 		fprintf(stderr,"param %d\n",argc);
 		return -1;
 	}
