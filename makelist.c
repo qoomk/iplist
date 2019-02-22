@@ -58,7 +58,7 @@ int main(int argc,char*argv[]){
 
 	sprintf(listfilewk,"%s_wk",listfile);
 
-	fp = fopen(listfilewk,"w");
+	fp = fopen(listfilewk,"wt");
 	if(fp==NULL){
 		printf("file open(create) %s\n",listfilewk);
 		fprintf(stderr,"file open(create) %s\n",listfilewk);
