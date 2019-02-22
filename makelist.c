@@ -86,8 +86,8 @@ int main(int argc,char*argv[]){
 
 	fclose(fp);
 
-	if(rename(listfilewk, listfile)==0){
-		remove(listfilewk);
+	if(!rename(listfilewk, listfile)==0){
+		//remove(listfilewk);
 	}else{
 		fprintf(stderr,"file rename ng %s %s\n",listfilewk,listfile);
 	}
