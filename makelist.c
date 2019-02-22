@@ -47,7 +47,7 @@ int main(int argc,char*argv[]){
 		}
 
 	}
-return 0;
+
 	FILE *fp;
 	int ip4p,fds,ret;
 	char ethip[30],listfilewk[256];
