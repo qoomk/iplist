@@ -79,7 +79,7 @@ int main(int argc,char*argv[]){
 			//printf("connect ng %s %d\n",ethip,ret);
 		}else{
 			//printf("connect ok %s %d\n",ethip,ret);
-			sprintf(ethipwk,"%s\n");
+			sprintf(ethipwk,"%s\n",ethip);
 			fputs(ethipwk,fp);
 		}
 	}
