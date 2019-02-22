@@ -66,6 +66,7 @@ int main(int argc,char*argv[]){
 
 	for(ip4p=ip4s;ip4p<=ip4e;ip4p++){
 		sprintf(ethip,"%s.%d",ip123,ip4p);
+		printf("%s\n",ethip);
 		fds=socket(AF_INET,SOCK_STREAM,0);
 		bzero((char *)&client_addr, sizeof(client_addr));
 		client_addr.sin_family = AF_INET;
