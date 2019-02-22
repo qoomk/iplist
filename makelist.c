@@ -50,8 +50,9 @@ int main(int argc,char*argv[]){
 
 	FILE *fp;
 	int ip4p,fds,ret;
-	char ethip[30],listfilewk[256];
+	char ethip[30],ethipwk[32],listfilewk[256];
 	ethip[0]='\0';
+	ethipwk[0]='\0';
 	listfilewk[0]='\0';
 	struct ifreq ifr;
 	struct sockaddr_in client_addr;
@@ -78,6 +79,7 @@ int main(int argc,char*argv[]){
 			printf("connect ng %s %d\n",ethip,ret);
 		}else{
 			printf("connect ok %s %d\n",ethip,ret);
+			sprintf(ethipwk,"%s%n");
 			fputs(ethip,fp);
 		}
 	}
@@ -87,7 +89,7 @@ int main(int argc,char*argv[]){
 	if(rename(listfilewk, listfile)==0){
 		remove(listfilewk);
 	}else{
-		fprintf(stderr,"file rename %s %s\n",listfilewk,listfile);
+		fprintf(stderr,"file rename ng %s %s\n",listfilewk,listfile);
 	}
 
 
