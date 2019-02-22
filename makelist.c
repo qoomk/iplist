@@ -80,13 +80,13 @@ int main(int argc,char*argv[]){
 		}else{
 			printf("connect ok %s %d\n",ethip,ret);
 			sprintf(ethipwk,"%s%n");
-			fputs(ethip,fp);
+			fputs(ethipwk,fp);
 		}
 	}
 
 	fclose(fp);
 
-	if(!rename(listfilewk, listfile)==0){
+	if(rename(listfilewk, listfile)==0){
 		//remove(listfilewk);
 	}else{
 		fprintf(stderr,"file rename ng %s %s\n",listfilewk,listfile);
