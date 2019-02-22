@@ -22,14 +22,14 @@ int main(int argc,char*argv[]){
 	char *listfile,*ip123;
 	int ip4s,ip4e;
 
-	
+	printf("param %d\n",argc);
+	if(argc != 4){
+		fprintf(stderr,"param %d\n",argc);
+		return -1;
+	}
 
 	while((opt=getopt(argc,argv,"l:i:s:e:"))!= -1){
-		if(argc != 4){
-			printf("param %d\n",argc);
-			fprintf(stderr,"param %d\n",argc);
-			return -1;
-		}
+		printf("%c %s \n",opt,optarg);
 		switch(opt){
 			case 'l':
 				listfile=optarg;
@@ -46,7 +46,7 @@ int main(int argc,char*argv[]){
 		}
 
 	}
-
+return 0;
 	FILE *fp;
 	int ip4p,fds,ret;
 	char ethip[30],listfilewk[256];
