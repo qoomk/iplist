@@ -24,6 +24,7 @@ int main(int argc,char*argv[]){
 
 	while((opt=getopt(argc,argv,"l:i:s:e:"))!= -1){
 		if(argc != 4){
+			printf("param %d\n",argc);
 			fprintf(stderr,"param %d\n",argc);
 			return -1;
 		}
@@ -54,6 +55,7 @@ int main(int argc,char*argv[]){
 
 		fp = fopen(listfilewk,"w");
 		if(fp==NULL){
+			printf("file open(create) %s\n",listfilewk);
 			fprintf(stderr,"file open(create) %s\n",listfilewk);
 			return -1;
 		}
