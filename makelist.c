@@ -76,9 +76,9 @@ int main(int argc,char*argv[]){
 		client_addr.sin_port = htons(502);
 		ret=connect(fds,(struct sockaddr *)&client_addr,sizeof(client_addr));
 		if (ret < 0) {
-			//printf("connect ng %s %d\n",ethip,ret);
+			printf("connect ng %s %d\n",ethip,ret);
 		}else{
-			//printf("connect ok %s %d\n",ethip,ret);
+			printf("connect ok %s %d\n",ethip,ret);
 			sprintf(ethipwk,"%s\n",ethip);
 			fputs(ethipwk,fp);
 		}
