@@ -1,2 +1,4 @@
 makelist
 *.sh
+.vscode/*
+.vscode
